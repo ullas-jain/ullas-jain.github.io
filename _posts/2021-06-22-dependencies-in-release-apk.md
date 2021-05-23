@@ -1,7 +1,7 @@
 ---
 title: "So you want to know what dependencies are present in your release-apk."
 excerpt: "So you want to know what dependencies are present in your release-apk."
-last_modified_at: 2018-01-03T09:45:06-05:00
+last_modified_at: 2021-06-03T09:45:06-05:00
 tags: 
   - code
   - syntax highlighting
