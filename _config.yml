@@ -124,13 +124,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/ullas_jain"
+      # url: "https://twitter.com/ullas_jain"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/ullas-jain"
+      # url: "https://github.com/ullas-jain"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
