@@ -102,7 +102,7 @@ However, you can inspect the metadata yourself in the local intermediate build f
 ## Closing
 
 
-- At the time of this writing, there are about `69` androidX libraries present in the release variant of `android/sunflower`.
+- At the time of this writing, there are about `70` androidX libraries present in the release variant of `android/sunflower`.
 - `sdkDependency.txt` is not generated for `debug` variants.
 
 

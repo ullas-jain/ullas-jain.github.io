@@ -21,14 +21,14 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : # "Ullas Jain"
 description              : # "World with the lens of a Software Engineer"
-url                      : # "https://ullasjain.com"
+url                      : "https://ullas-jain.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # "/assets/images/88x88.png"
-masthead_title           : "Ullas Jain"
+masthead_title           : "Home"
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 100
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -115,9 +115,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ullas-jain"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "Goodreads"
+      icon: "fab fa-fw fa-goodreads"
+      url: "https://www.goodreads.com/user/show/52668478-ullas-jain"
 
 # Site Footer
 footer:
