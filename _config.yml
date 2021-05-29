@@ -21,7 +21,7 @@ title_separator          : # "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : # "Ullas Jain"
 description              : # "World with the lens of a Software Engineer"
-url                      : "https://ullas-jain.github.io/"
+url                      : "https://ullasjain.com/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ullas-jain/ullas-jain.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
