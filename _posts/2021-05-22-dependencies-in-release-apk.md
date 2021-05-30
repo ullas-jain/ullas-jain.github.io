@@ -89,7 +89,7 @@ library {
 
 ## What's happening underneath
 
-When building your app using Android Gradle plugin 4.0.0 and higher, the plugin includes metadata that describes the dependencies that are compiled into your app. When uploading your app, the Play Console inspects this metadata to provide you with the following benefits:
+When [building your app using Android Gradle plugin 4.0.0](https://developer.android.com/studio/releases/gradle-plugin#dependency-metadata) and higher, the plugin includes metadata that describes the dependencies that are compiled into your app. When uploading your app, the Play Console inspects this metadata to provide you with the following benefits:
 
 
 > Get alerts for known issues with SDKs and dependencies your app uses. Receive actionable feedback to resolve those issues.

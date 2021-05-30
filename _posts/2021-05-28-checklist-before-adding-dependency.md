@@ -3,6 +3,7 @@ title: "Checklist before adding a new dependency to your android-app"
 excerpt: "Some dependencies are essential for your app to scale. Some may have adverse effect."
 last_modified_at: 2021-05-28T09:45:06-05:00
 tags: 
+  - android
   - release-apk
   - dependencies
 toc: true
