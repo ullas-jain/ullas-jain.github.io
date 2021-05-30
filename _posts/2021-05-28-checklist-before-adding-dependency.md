@@ -1,12 +1,12 @@
 ---
 title: "Checklist before adding a new dependency to your android-app"
-excerpt: "Some dependencies are essential for your app to scale. Some may have an adverse effect."
+excerpt: "Some dependencies are essential for your app to scale. Some may have adverse effect."
 last_modified_at: 2021-05-28T09:45:06-05:00
-tags:
-- android
-- release-apk
-- dependencies
-  toc: true
+tags: 
+  - android
+  - release-apk
+  - dependencies
+toc: true
 ---
 Some dependencies are essential to make your app scale faster. Example - Networking libraries such as Retrofit/OkHttp.
 
@@ -14,7 +14,7 @@ Some dependencies might seem good in the initial stages, but they pose problems 
 
 **Change** -  to newer/better libraries.
 
-**Upgrade** - to the newer version of the same dependency which might come with breaking api changes.
+**Upgrade** - to the newer version of same dependency which might come with breaking api changes.
 
 **Maintenance** - Your teammates might not be aware that such a library is added to the code-base.
 
@@ -36,7 +36,7 @@ This also serves as a document that your team could look back on, to understand 
 
 *How does the problem affect consumers of the app?*
 
-*Can we achieve this requirement using core libraries of android or kotlin instead?*
+*Can we achieve this requirement using core-libraries of android or kotlin instead?*
 
 
 ## Adoption strategy.
@@ -59,10 +59,10 @@ This also serves as a document that your team could look back on, to understand 
 *Data on memory profiling*
 *objects allocation*, *shallow size*, *share the screenshot and mention any other relevant data.*
 
-*Why the selected library is better than the other alternatives?*
+*Why selected library is better than the other alternatives?*
 
 
-## What is the impact of adding XYZ library in terms of?
+## What is the impact on adding XYZ library in terms of ?
 
 *APK size of release and debug flavors.*
 
@@ -71,13 +71,13 @@ This also serves as a document that your team could look back on, to understand 
 *Method count that the library adds in release flavor.*
 
 *Performance of the app* -
-*How the app behaves while other apps are open in the background?*
+*How app behaves while other apps are open in background?*
 *Have we checked the leaks using leak-canary after integrating library to the app?*
 
 
 ## To have a smooth update of this library with a better alternative in the future.
 
-*Can we create a facade and access the library via facade?*
+*Can we create a facade and access library via facade?*
 
 
 ## References
