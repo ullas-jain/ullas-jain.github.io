@@ -9,7 +9,7 @@ toc: true
 ---
 Some dependencies are essential to make your app scale faster. Example - Networking libraries such as Retrofit/OkHttp.
 
-Some dependencies might be good in the initial stages, but they pose problems when,
+Some dependencies might seem good in the initial stages, but they pose problems when,
 
 **Change** -  to new and better libraries.
 
@@ -17,7 +17,7 @@ Some dependencies might be good in the initial stages, but they pose problems wh
 
 **Maintainance** - Your teammates might not be aware that such a library is added to the code-base.
 
-Hence, we will look at some checklist items that you need to reflect on (possibly fill it and share it with your android-team) before adding the new library.
+Hence, we will look at some checklist items that you need to reflect on (possibly fill it and share it with your android-team) before adding a new library.
 This also serves as a document that your team could look back on, to understand why this dependency was added in the first place.
 
 ## Components Impacted
@@ -27,6 +27,7 @@ This also serves as a document that your team could look back on, to understand 
 ## Usage
 
 *Details on how to use the library.*
+*Show me code!*
 
 ## Why do we need XYZ library?
 
@@ -60,7 +61,7 @@ This also serves as a document that your team could look back on, to understand 
 *..shallow size..*
 *…share the screenshot and mention any other relevant data*
 
-*Why the selected library is better than the other alternatives?*
+*Why selected library is better than the other alternatives?*
 
 
 ## What is the impact on adding XYZ library in terms of ?
@@ -73,7 +74,7 @@ This also serves as a document that your team could look back on, to understand 
 
 *Performance of the app.*
 *…how app behaves while other apps are open in background…*
-*.have we checked on the leaks using leak-canary?*
+*Have we checked the leaks using leak-canary?*
 
 
 ## To have a smooth update of this library with a better alternative in the future.
