@@ -2,31 +2,31 @@
 title: "Know what dependencies are present in your release-apk."
 excerpt: "So you want to know what dependencies are present in your release-apk."
 last_modified_at: 2021-05-30T09:45:06-05:00
-tags:
-- android
-- release-apk
-- dependencies
-- android-gradle-plugin
-- android/sunflower
-  toc: true
+tags: 
+  - android
+  - release-apk
+  - dependencies
+  - android-gradle-plugin
+  - android/sunflower
+toc: true
 ---
 
 No, we are not going to reverse engineer the release-apk. _Not today._
 
-This is more of a sanity verification to make sure everything is
+This is more of a sanity verification to make sure everything is 
 baked according to standards in the final release-apk.
 
-## Why?
+## Why ?
 
-With multiple engineers pushing code every day to a massive project, it is easy to miss those unnecessary libraries that are mistakenly baked into release-apk.
+With multiple engineers pushing code every day to a massive project, it is easy to miss those un-necessary libraries that are mistakenly baked into release-apk.
 
-Example:
+Example: 
 Test libraries like `junit` or `mockito`.
-Debug target libraries like `chuck`
+Debug target libraries like `chuck` 
 
 ## Prerequisites
 
-- An Android project having [gradle](https://gradle.org/) as its build system.
+- An Android project having [gradle](https://gradle.org/) as it's build system.
 - Project should have [Android-gradle-plugin](https://developer.android.com/studio/releases/gradle-plugin) version `4.0.0` or higher (defined in the project's build.gradle, inside `buildScript { }` block).
 
 ## Show me code
@@ -46,7 +46,7 @@ Step 2: Navigate to `android/sunflower` and assemble the release variant.
 ./gradlew :app:assembleRelease
 ```
 
-Step 3: After assembling the app, navigate to the project's build/outputs folder to find the *magical* `sdkDependency.txt`
+Step 3: After assembling the app, navigate to project's build/outputs folder to find the *magical* `sdkDependency.txt`
 
 ```shell
 cd /sunflower/app/build/outputs/sdk-dependencies/release
@@ -95,16 +95,16 @@ When [building your app using Android Gradle plugin 4.0.0](https://developer.and
 > Get alerts for known issues with SDKs and dependencies your app uses. Receive actionable feedback to resolve those issues.
 
 
-The data is compressed, encrypted by a Google Play signing key, and stored in the signing block of your release app.
-However, you can inspect the metadata yourself in the local intermediate build files in the following directory:
+The data is compressed, encrypted by a Google Play signing key, and stored in the signing block of your release app. 
+However, you can inspect the metadata yourself in the local intermediate build files in the following directory: 
 `<project>/<module>/build/outputs/sdk-dependencies/release/sdkDependency.txt.`
 
 ## How to make use of this
 
-Analyze the `sdkDependency.txt` for outliers of debug-target/test libraries such as `chuck`/`mockito`/`junit`.
+Analyse the `sdkDependency.txt` for outliers of debug-target/test libraries such as `chuck`/`mockito`/`junit`.
 
-This can be added as a job to your CI/CD workflow (post APK generation) via a script that captures the same.
-Send a bot comment to the merge request if there is such `test` library that got mistakenly added.
+This can be added as a job to your CI/CD workflow (post APK generation) via script which captures the same.
+Send a bot comment to the merge-request if there is such `test` library that got mistakenly added.
 
 ## Closing
 
