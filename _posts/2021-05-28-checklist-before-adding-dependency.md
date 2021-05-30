@@ -22,7 +22,7 @@ This also serves as a document that your team could look back on, to understand 
 
 ## Components Impacted
 
-*What components and modules will be impacted upon adding this library.*
+*What components and modules will be impacted upon adding this library?*
 
 ## Usage
 
@@ -70,8 +70,8 @@ This also serves as a document that your team could look back on, to understand 
 *Method count that the library adds in release flavor.*
 
 *Performance of the app* -
-*How app behaves while other apps are open in background.*
-*Have we checked the leaks using leak-canary?*
+*How app behaves while other apps are open in background?*
+*Have we checked the leaks using leak-canary after integrating library to the app?*
 
 
 ## To have a smooth update of this library with a better alternative in the future.
