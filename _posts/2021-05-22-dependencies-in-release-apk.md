@@ -1,8 +1,9 @@
 ---
 title: "Know what dependencies are present in your release-apk."
 excerpt: "So you want to know what dependencies are present in your release-apk."
-last_modified_at: 2021-05-03T09:45:06-05:00
+last_modified_at: 2021-05-30T09:45:06-05:00
 tags: 
+  - android
   - release-apk
   - dependencies
   - android-gradle-plugin
@@ -17,7 +18,7 @@ baked according to standards in the final release-apk.
 
 ## Why ?
 
-With multiple engineers pushing code everyday to a massive project, it is easy to miss those un-necessary libraries that are being baked into release-apk. 
+With multiple engineers pushing code every day to a massive project, it is easy to miss those un-necessary libraries that are mistakenly baked into release-apk.
 
 Example: 
 Test libraries like `junit` or `mockito`.
@@ -31,7 +32,7 @@ Debug target libraries like `chuck`
 ## Show me code
 
 Let's inspect the same with android's famous open-sourced project [android/sunflower](https://github.com/android/sunflower).
-We can see that `sunflower` project is having [android-gradle-plugin version >= 4.0.0](https://github.com/android/sunflower/blob/main/build.gradle#L62)
+We can see that `sunflower` project has [android-gradle-plugin version >= 4.0.0](https://github.com/android/sunflower/blob/main/build.gradle#L62)
 
 Step 1: Clone the repository using HTTPS or SSH.
 
@@ -98,6 +99,11 @@ The data is compressed, encrypted by a Google Play signing key, and stored in th
 However, you can inspect the metadata yourself in the local intermediate build files in the following directory: 
 `<project>/<module>/build/outputs/sdk-dependencies/release/sdkDependency.txt.`
 
+## How to make use of this
+
+Analyse the `sdkDependency.txt` for outliers of debug-target/test libraries such as `chuck`/`mockito`/`junit`.
+This can be added as a job to your CI/CD flow (post APK generation) via script which captures the same.
+Send a bot comment to the merge-request if there is such `test` library that got mistakenly added.
 
 ## Closing
 
