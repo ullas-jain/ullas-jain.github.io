@@ -102,7 +102,8 @@ However, you can inspect the metadata yourself in the local intermediate build f
 ## How to make use of this
 
 Analyse the `sdkDependency.txt` for outliers of debug-target/test libraries such as `chuck`/`mockito`/`junit`.
-This can be added as a job to your CI/CD flow (post APK generation) via script which captures the same.
+
+This can be added as a job to your CI/CD workflow (post APK generation) via script which captures the same.
 Send a bot comment to the merge-request if there is such `test` library that got mistakenly added.
 
 ## Closing
