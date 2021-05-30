@@ -11,11 +11,11 @@ Some dependencies are essential to make your app scale faster. Example - Network
 
 Some dependencies might seem good in the initial stages, but they pose problems when,
 
-**Change** -  to new and better libraries.
+**Change** -  to newer/better libraries.
 
-**Updrade** - to the newer version of same dependency which might come with breaking api changes.
+**Upgrade** - to the newer version of same dependency which might come with breaking api changes.
 
-**Maintainance** - Your teammates might not be aware that such a library is added to the code-base.
+**Maintenance** - Your teammates might not be aware that such a library is added to the code-base.
 
 Hence, we will look at some checklist items that you need to reflect on (possibly fill it and share it with your android-team) before adding a new library.
 This also serves as a document that your team could look back on, to understand why this dependency was added in the first place.
@@ -40,26 +40,23 @@ This also serves as a document that your team could look back on, to understand 
 
 ## Adoption strategy.
 
-*Is XYZ library is replacing any other existing library?*
-…*if yes, share the details on migration strategy..*
+*Is XYZ library is replacing any other existing library?* *If yes, share the details on migration strategy.*
 
-*Rollout strategy : Are we doing a/b testing to make sure it behaves correctly?*
-*…share the details on adoption strategy, when do we plan to rollout 100%..*
+*Rollout strategy - Are we doing a/b testing to make sure it behaves correctly?*
+*Share the details on adoption strategy, when do we plan to roll out 100%?*
 
 
 ## What are the alternatives to XYZ library?
 
 *Can we extract just the required functionality and add it instead? If no, why not?*
 
-*Have we verified the open issues/active maintenance.. of the library?*
+*Have we verified the open issues/active maintenance etc of the library?*
 
 *What other libraries were considered?*
-…*mention pros and cons, build time, apk size…*
+*mention pros and cons, build time, apk size.*
 
 *Data on memory profiling*
-*..objects allocation..*
-*..shallow size..*
-*…share the screenshot and mention any other relevant data*
+*objects allocation*, *shallow size*, *share the screenshot and mention any other relevant data.*
 
 *Why selected library is better than the other alternatives?*
 
@@ -72,8 +69,8 @@ This also serves as a document that your team could look back on, to understand 
 
 *Method count that the library adds in release flavor.*
 
-*Performance of the app.*
-*…how app behaves while other apps are open in background…*
+*Performance of the app* -
+*How app behaves while other apps are open in background.*
 *Have we checked the leaks using leak-canary?*
 
 
