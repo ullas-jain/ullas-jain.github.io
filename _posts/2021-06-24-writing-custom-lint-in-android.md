@@ -1,11 +1,11 @@
 ---
-title: “Writing your first custom lint."
-excerpt: “To show warnings for the usages of a deprecated library."
+title: Writing your first custom lint.
+excerpt: To show warnings for the usages of a deprecated library.
 last_modified_at: 2021-06-24T09:45:06-05:00
 tags: 
   - lint
   - android/sunflower
-toc: true
+toc: false
 ---
 
 Let’s say your app uses `glide` for loading images. Upon recently you have stumbled upon the newer library `coil`.
@@ -18,7 +18,7 @@ For today’s blog, let’s look at `android/sunflower` which uses `glide` for l
 
 ## Basics on lint.
 
-Lint is a code scanning tool that can help you to identify and correct the structural problems of your code without having to execute the app or write unit-
+Lint is a code scanning tool that can help you to identify and correct the structural problems of your code without having to execute the app or write unit-tests.
 
 ## Show me code
 
@@ -47,16 +47,18 @@ dependencies {
 }
 // Don’t worry, we’ll come back to this part in step-4.
 // This is a service loader mechanism of registering lint. This part is essential.
+// Later we'll create a new class called LintRegistry
+// for now, update this with your package name.
 jar {
     manifest {
-        attributes("Lint-Registry-v2": "com.jain.ullas.custom_lint.LintRegistry")
+        attributes("Lint-Registry-v2": "com.jain.ullas.custom_lint.LintRegistry") 
     }
 }
 ```
 2.2 Make sure to include `custom-lint` in `settings.gradle`
 
 ```shell
-Include ‘:custom-lint’
+include ‘:custom-lint’
 ```
 
 2.3 Add `lintChecks` to `:app` module inside dependencies block.
@@ -65,17 +67,18 @@ Include ‘:custom-lint’
 lintChecks project(':custom-lint’)
 ```
 
-2.4 Add custom `lintOptions`
+2.4 Add custom `lintOptions` within `android` block of `:app`'s build.gradle
 
 ```shell
-    lintOptions {
-        abortOnError false
-        htmlReport true
-    }
+lintOptions {
+    abortOnError false
+    htmlReport true
+}
 ```
 
 
-### Step 3: Create a lint detector that captures the usage of `Glide` imports.
+### Step 3: Create a lint detector that captures the usage of `glide` imports.
+
 
 ```kotlin
 @Suppress("UnstableApiUsage", "SameParameterValue")
@@ -147,6 +150,10 @@ class LintRegistry : IssueRegistry() {
 ```
 
 ### Step 5: Last important step, let’s add unit-tests.
+
+Test case-1 `testImportKotlin()` captures the usages of `glide` in kotlin files.
+Test case-2 `testImportJava()` captures the usages of `glide` in java files.
+Note that mentioning "com.bumptech.glide" inside a comment has no effect.
 
 ```kotlin
 @Suppress("UnstableApiUsage")
