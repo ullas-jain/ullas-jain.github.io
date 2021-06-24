@@ -6,6 +6,7 @@ tags:
   - lint
   - android/sunflower
 toc: false
+classes: wide
 ---
 
 Let’s say your app uses `glide` for loading images. Upon recently you have stumbled upon the newer library `coil`.
