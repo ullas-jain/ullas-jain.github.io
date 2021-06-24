@@ -50,7 +50,6 @@ dependencies {
 // This is a service loader mechanism of registering lint. This part is essential.
 // Later you'll create a new class called LintRegistry
 // for now, update this with your package name.
-
 jar {
     manifest {
         attributes("Lint-Registry-v2": "com.jain.ullas.custom_lint.LintRegistry") 
