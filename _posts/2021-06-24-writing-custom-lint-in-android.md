@@ -230,5 +230,6 @@ Generated html reports can be found in `/sunflower/app/build/reports/lint-result
 ## References
 
 [Lint API guide](https://googlesamples.github.io/android-custom-lint-rules/api-guide.html)
+
 [Google-sample for custom lint](https://github.com/googlesamples/android-custom-lint-rules)
 
