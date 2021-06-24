@@ -77,7 +77,7 @@ lintOptions {
 ```
 
 
-### Step 3: Create a lint detector that captures the usage of `glide` imports.
+### Step 3: Create a lint detector that captures the usage of `glide`  imports.
 
 
 ```kotlin
