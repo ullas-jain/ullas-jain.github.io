@@ -9,17 +9,15 @@ toc: false
 classes: wide
 ---
 
-Let’s say your app uses `glide` for loading images. Upon recently you have stumbled upon the newer library `coil`.
-Coil is lightweight, easy to use and entirely written in kotlin. You have decided to adapt `coil` and migrate the usages of `glide` to `coil`.
+Let’s say your app uses glide for loading images. Upon recently, you have stumbled upon the newer library coil. Coil is lightweight, easy to use, and entirely written in kotlin. You have decided to adapt coil and migrate the usages of glide to coil.
 
-So, instead of migrating all the usages in one go, you can take a stepwise action. You can show lint warnings on the usages of `glide`. 
-Migration can be considered as a next step.
+So, instead of migrating all the usages in one go, you can take a stepwise action. You can show lint warnings on the usages of glide. Migration can be considered as the next step.
 
-For today’s blog, let’s look at `android/sunflower` which uses `glide` for loading images. We’ll show `lint` warnings for the `glide` usages.
+For today’s blog, let’s look at android/sunflower which uses glide for loading images. We’ll show lint warnings for the glide usages.
 
 ## Basics on lint.
 
-Lint is a code scanning tool that can help you to identify and correct the structural problems of your code without having to execute the app or write unit-tests.
+Lint is a code scanning tool that can help you to identify and correct the structural problems of your code without having to execute the app or write unit tests.
 
 ## Show me code
 
@@ -80,10 +78,9 @@ lintOptions {
 
 ### Step 3: Create a lint detector that captures the usage of `glide`  imports.
 
-The Detector API: “Implement a new lint check”. This is the API which lets checkers analyze code and report problems that they find.
+The Detector API: “Implement a new lint check”. This is the API that lets checkers analyze code and report problems that they find.
 
-Lint has dedicated support for analyzing various file types. The way this works is that you register interest, and then various callbacks will be invoked. 
-You'll be implementing `visitImportStatement` callback from `SourceCodeScanner`, for analysing imports in Kotlin and Java files.
+Lint has dedicated support for analyzing various file types. The way this works is that you register interest, and then various callbacks will be invoked. You’ll be implementing visitImportStatement callback from SourceCodeScanner, for analyzing imports in Kotlin and Java files.
 
 ```kotlin
 @Suppress("UnstableApiUsage", "SameParameterValue")
@@ -156,9 +153,7 @@ class LintRegistry : IssueRegistry() {
 
 ### Step 5: Last important step, let’s add unit-tests.
 
-Test case-1 `testImportKotlin()` captures the usages of `glide` in kotlin files.
-Test case-2 `testImportJava()` captures the usages of `glide` in java files.
-Note that mentioning "com.bumptech.glide" inside a comment has no effect.
+Test case-1 `testImportKotlin()` captures the usages of glide in kotlin files. Test case-2 `testImportJava()` captures the usages of glide in java files. Note that mentioning `“com.bumptech.glide”` inside a comment has no effect.
 
 ```kotlin
 @Suppress("UnstableApiUsage")
