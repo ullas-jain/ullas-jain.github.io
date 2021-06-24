@@ -48,7 +48,7 @@ dependencies {
 }
 // Don’t worry, we’ll come back to this part in step-4.
 // This is a service loader mechanism of registering lint. This part is essential.
-// Later we'll create a new class called LintRegistry
+// Later you'll create a new class called LintRegistry
 // for now, update this with your package name.
 jar {
     manifest {
@@ -59,7 +59,7 @@ jar {
 2.2 Make sure to include `custom-lint` in `settings.gradle`
 
 ```shell
-include ‘:custom-lint’
+include ':custom-lint'
 ```
 
 2.3 Add `lintChecks` to `:app` module inside dependencies block.
@@ -80,6 +80,10 @@ lintOptions {
 
 ### Step 3: Create a lint detector that captures the usage of `glide`  imports.
 
+The Detector API: “Implement a new lint check”. This is the API which lets checkers analyze code and report problems that they find.
+
+Lint has dedicated support for analyzing various file types. The way this works is that you register interest, and then various callbacks will be invoked. 
+You'll be implementing `visitImportStatement` callback from `SourceCodeScanner`, for analysing imports in Kotlin and Java files.
 
 ```kotlin
 @Suppress("UnstableApiUsage", "SameParameterValue")
@@ -230,7 +234,6 @@ Generated html reports can be found in `/sunflower/app/build/reports/lint-result
 
 ## References
 
-[Lint API guide](https://googlesamples.github.io/android-custom-lint-rules/api-guide.html)
-
-[Google-sample for custom lint](https://github.com/googlesamples/android-custom-lint-rules)
+- [Lint API guide](https://googlesamples.github.io/android-custom-lint-rules/api-guide.html)
+- [Google-sample for custom lint](https://github.com/googlesamples/android-custom-lint-rules)
 
