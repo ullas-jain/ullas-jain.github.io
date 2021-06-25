@@ -1,6 +1,6 @@
 ---
 title: Writing your first custom lint.
-excerpt: To show warnings for the usages of a deprecated library.
+excerpt: Migrating a library to newer one is not a piece of cake. Showing lint warnings for the usages of a deprecated library could be considered as a first step.
 last_modified_at: 2021-06-24T09:45:06-05:00
 tags: 
   - lint
@@ -9,11 +9,11 @@ toc: false
 classes: wide
 ---
 
-Let’s say your app uses glide for loading images. Upon recently, you have stumbled upon the newer library coil. Coil is lightweight, easy to use, and entirely written in kotlin. You have decided to adapt coil and migrate the usages of glide to coil.
+Let’s say your app uses [glide](https://github.com/bumptech/glide) for loading images. Upon recently, you have stumbled upon the newer library `coil`. [Coil](https://github.com/coil-kt/coil) is lightweight, easy to use, and entirely written in kotlin. You have decided to adapt coil and **migrate the usages of glide to coil.**
 
 So, instead of migrating all the usages in one go, you can take a stepwise action. You can show lint warnings on the usages of glide. Migration can be considered as the next step.
 
-For today’s blog, let’s look at android/sunflower which uses glide for loading images. We’ll show lint warnings for the glide usages.
+For today’s blog, let’s look at `android/sunflower` which uses glide for loading images. We’ll show lint warnings for the glide usages.
 
 ## Basics on lint.
 
@@ -230,5 +230,7 @@ Generated html reports can be found in `/sunflower/app/build/reports/lint-result
 ## References
 
 - [Lint API guide](https://googlesamples.github.io/android-custom-lint-rules/api-guide.html)
+- [Android Lint documentation](https://developer.android.com/studio/write/lint)
+- [Lint code-base for geeks](https://cs.android.com/android-studio/platform/tools/base/+/mirror-goog-studio-main:lint/;l=1?q=lint)
 - [Google-sample for custom lint](https://github.com/googlesamples/android-custom-lint-rules)
 
